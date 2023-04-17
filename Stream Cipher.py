@@ -24,7 +24,7 @@ def xor(string1, string2):
     return "".join([chr(ord(c1) ^ ord(c2)) for (c1, c2) in zip(string1, string2)])
 
 
-def read_char_and_return_key():
+def read_char_and_return_key():  
     cipher_code = ""
     total__key = ""
     mask = '10000011'
