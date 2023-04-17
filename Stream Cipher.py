@@ -1,4 +1,17 @@
+"""
+To solve this problem :
+1-I first read the line from the file character by character
+2-I took each character then create the char_key related to it randomly using the LFSR and i use the char it selfe as a seed so i will have a different and secret key for each character.
+3-Then I took that char_key and XOR it  with the character that we want to encrypt it.
+4- After all this I will have a xor_result thta i will append it to the final key.
+5-I repeat this for the whole characters in the file.
+6-for decryption I use the xor decryption using the total key that i already saved from the above process then i XOR it with the cipher code so I have the Plaintext as 
+result in the end .
 
+After Running the given example :
+The cipher code :(D»(»(((ï×ÿ(|«(((((|(ï×((ï«×ïï×((××ï×»Ç
+The plaintext is :this is a stream of data to be transferred securely.
+"""
 # ---------------------------------------FINDING THE KEY/method using different seed for each char ---------------------------------------
 def binary_string_to_string(binary_string):
     return ''.join(chr(int(binary_string[i*8:i*8+8], 2)) for i in range(len(binary_string)//8))
